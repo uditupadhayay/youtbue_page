@@ -170,7 +170,17 @@ section{
 	padding-top: 10px;
 	margin: 0 auto;
   position: relative;
-	overflow-y: visible;
+	overflow-y: hidden;
+}
+
+section:after
+{
+	clear: both;
+	content: "";
+	visibility: hidden;
+	display: block;
+	clear: both;
+	height: 0;
 }
 
 footer
@@ -178,9 +188,12 @@ footer
 	width: 100%;
 	min-width: 1275px;
 	padding: 0 30px;
-	position: relative;
 	box-sizing: border-box;
 	height: 144px;
+	/*When section positined relative it does not impacted the placement of the following
+	elements*/
+	position: relative;
+	top: 45px;
 	background: white;
 }
 
@@ -215,16 +228,12 @@ footer
 
 #comments
 {
-	width: 830px;
+	width: 850px;
 	margin-top: 10px;
 	background-color: #ffffff;
-	padding: 15px 10px;
-	overflow: visible;
-}
+	padding: 15px 15px;
+	box-sizing: border-box;
 
-.clearfloat
-{
-	clear: both;
 }
 
 video
@@ -262,5 +271,160 @@ strong
 .morecontent:hover
 {
 	color: black;
+	cursor: pointer;
+}
+
+.commenter-pic
+{
+	float: left;
+	display: inline-block;
+	margin-right: 20px;
+	height: 100%;
+	position: absolute;
+}
+
+.normal-header
+{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.user-comment
+{
+	font-size: 13px;
+	color: #555555;
+	border-bottom: 1px solid #E2E2E2;
+	padding-bottom: 15px;
+	box-sizing: border-box;
+}
+
+.user-comment textarea
+{
+	padding: 10px 10px;
+	width: 725px;
+	color: #555555;
+	box-sizing: border-box;
+	margin-left: 20px;
+	line-height: 15px;
+	font-size: 10px;
+	height: 50px;
+	color: black;
+}
+
+.user-comment textarea:focus
+{
+	border: 1px solid blue;
+}
+
+.user-comment p:first-child
+{
+	margin-bottom: 20px;
+}
+
+.user-comment img
+{
+	float: left;
+}
+
+.select-comment-order
+{
+	margin: 20px 0;
+}
+
+.select-comment-order select
+{
+	padding: 5px 7px;
+	background-color: white;
+		font-size: 11px;
+		color: #555555;
+		font-weight: bold;
+}
+
+.select-comment-order select:hover{
+	background-color: rgb(240,240,240);
+}
+
+.singlecomment
+{
+	font-size: 15px;
+	line-height: 1.2em;
+	position: relative;
+}
+
+.commenter-name a, .commenter-name a:visited
+{
+	color:#128ee9;
+	text-decoration: none;
+}
+
+.commenter-name a:hover
+{
+	text-decoration: underline;
+}
+
+.comment-time
+{
+	font-size: 13px;
+	color: #767676;
+}
+
+.singlecomment{
+	margin-bottom: 20px;
+}
+
+.comment-reply
+{
+	margin-left: 68px;
+	margin-bottom: 15px;
+}
+
+.reply-text
+{
+	color: #555;
+	opacity: 0.75;
+}
+
+.reply-text:hover
+{
+	color: black;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.like-count
+{
+	color:#128ee9;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.comment-action img
+{
+	opacity: 0.7;
+	vertical-align: baseline;
+}
+
+.comment-action img:hover
+{
+	opacity: 1;
+	cursor: pointer;
+}
+
+.comment-content
+{
+	margin-left: 60px;
+}
+
+.comment-reply .comment-content
+{
+	margin-left: 50px;
+}
+
+.comment-reply-all{
+	color:#128ee9;
+}
+
+.comment-reply-all:hover{
+	text-decoration: underline;
 	cursor: pointer;
 }
