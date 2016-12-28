@@ -200,9 +200,10 @@ footer
 #morevideos
 {
 	width: 420px;
-	height: 1250px; /*need to be removed later*/
-	background-color: orange; /*need to be removed later*/
   float: right;
+	box-sizing: border-box;
+	background-color: white;
+	padding: 15px;
 	top : 0;
 	left: 0;
 }
@@ -427,4 +428,44 @@ strong
 .comment-reply-all:hover{
 	text-decoration: underline;
 	cursor: pointer;
+}
+
+.video img
+{
+	float: left;
+	margin-right: 10px;
+}
+
+.video h2{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.video p{
+	font-size: 13px;
+	color: #767676;
+}
+
+.video::after
+{
+	content: "";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.video{
+	padding: 15px 0 0 0 ;
+}
+
+.video:first-of-type
+{
+	border-bottom: 1px solid #767676;
+	padding-bottom: 15px;
+}
+
+.video:hover
+{
+color:#128ee9;
 }
